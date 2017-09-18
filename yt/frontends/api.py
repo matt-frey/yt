@@ -38,6 +38,7 @@ _frontends = [
     'halo_catalog',
     'http_stream',
     'moab',
+    'opal',
     'open_pmd',
     'owls',
     'owls_subfind',

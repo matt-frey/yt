@@ -13,7 +13,7 @@
 # If you do not have a working compiler environment, use the following 
 # configuration:
 
-INST_YT_SOURCE=0   # Should yt itself be installed from source?
+INST_YT_SOURCE=1   # Should yt itself be installed from source?
 
 # What follows are some other options that you may or may not need to change.
 
@@ -24,10 +24,10 @@ YT_DIR=""
 
 # These options can be set to customize the installation.
 
-INST_PY3=1      # Install Python 3 instead of Python 2. If this is turned on,
+INST_PY3=0      # Install Python 3 instead of Python 2. If this is turned on,
                 # all Python packages (including yt) will be installed
                 # in Python 3.
-INST_GIT=1      # Install git or not?  If git is not already installed, yt
+INST_GIT=0      # Install git or not?  If git is not already installed, yt
                 # cannot be installed from source.
 INST_EMBREE=0   # Install dependencies needed for Embree-accelerated ray tracing
 INST_PYX=0      # Install PyX?  Sometimes PyX can be problematic without a
