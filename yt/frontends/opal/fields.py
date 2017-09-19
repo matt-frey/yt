@@ -21,11 +21,11 @@ spec_finder = re.compile(r'.*\((\D*)(\d*)\).*')
 
 class OpalFieldInfo(FieldInfoContainer):
     known_other_fields = (
-        ("rho", ("C/m**3", ["rho"], r"\rho")),
-        ("Ex", ("V / m", ["Ex"], r"E_{x}")),
-        ("Ey", ("V / m", ["Ey"], r"E_{y}")),
-        ("Ez", ("V / m", ["Ez"], r"E_{z}")),
-        ("potential", ("V", ["potential"], r"\Phi"))
+        ("rho", ("C/m**3", ["charge_density"], r"\rho")),
+        ("Ex", ("V / m", ["electric_field_x"], r"E_{x}")),
+        ("Ey", ("V / m", ["electric_field_y"], r"E_{y}")),
+        ("Ez", ("V / m", ["electric_field_z"], r"E_{z}")),
+        ("phi", ("V", ["electrostatic_potential"], r"\Phi"))
     )
 
     known_particle_fields = (
@@ -55,8 +55,8 @@ class OpalFieldInfo(FieldInfoContainer):
         pass
 
 
-class OpalSingleFieldInfo(FieldInfoContainer):
+#class OpalSingleFieldInfo(FieldInfoContainer):
     
-    known_other_fields = ()
+    #known_other_fields = ()
     
-    known_particle_fields = ()
+    #known_particle_fields = ()

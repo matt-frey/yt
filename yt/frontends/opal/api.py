@@ -14,19 +14,19 @@ API for yt.frontends.opal
 #-----------------------------------------------------------------------------
 
 from .data_structures import \
-      OpalGrid, \
       OpalHierarchy, \
-      OpalDataset, \
-      OpalSingleGrid, \
-      OpalSingleHierarchy, \
-      OpalSingleDataset
+      OpalDataset
+      #OpalGrid,
+      #OpalSingleGrid, \
+      #OpalSingleHierarchy, \
+      #OpalSingleDataset
 
 from .fields import \
-      OpalFieldInfo, \
-      OpalSingleFieldInfo
+      OpalFieldInfo
+      #OpalSingleFieldInfo
 
 from .io import \
-      IOHandlerOpal, \
-      IOHandlerOpalSingle
+      IOHandlerOpal
+      #IOHandlerOpalSingle
 
 #from . import tests
