@@ -25,22 +25,38 @@ class OpalFieldInfo(FieldInfoContainer):
         ("Ex", ("V / m", ["electric_field_x"], r"E_{x}")),
         ("Ey", ("V / m", ["electric_field_y"], r"E_{y}")),
         ("Ez", ("V / m", ["electric_field_z"], r"E_{z}")),
-        ("phi", ("V", ["electrostatic_potential"], r"\Phi"))
+        ("phi", ("V", ["electrostatic_potential"], r"\Phi")),
     )
 
     known_particle_fields = (
-        ("particle_mass", ("eV / c ** 2", [], None)),
-        ("particle_charge", ("code_charge", [], None)),
+        ("particle_mass", ("GeV / c ** 2", [], None)),
+        ("particle_charge", ("C", [], None)),
         ("particle_position_x", ("code_length", [], None)),
         ("particle_position_y", ("code_length", [], None)),
         ("particle_position_z", ("code_length", [], None)),
-        ("particle_momentum_x", (r"\beta\gamma", [], r"p_{x}")),
-        ("particle_momentum_y", (r"\beta\gamma", [], r"p_{y}")),
-        ("particle_momentum_z", (r"\beta\gamma", [], r"p_{z}"))
+        ("particle_momentum_x", ("1", [], r"p_{x}")), # r"\beta\gamma"
+        ("particle_momentum_y", ("1", [], r"p_{y}")),
+        ("particle_momentum_z", ("1", [], r"p_{z}")),
+        ("particle_timestep", ("code_time", [], None)),
+        ("particle_potential", ("V", [], r"\Phi")),
+        ("particle_electric_field_x", ("V / m", [], r"E_{x}")),
+        ("particle_electric_field_y", ("V / m", [], r"E_{y}")),
+        ("particle_electric_field_z", ("V / m", [], r"E_{z}")),
+        ("particle_magnetic_field_x", ("T", [], r"B_{x}")),
+        ("particle_magnetic_field_y", ("T", [], r"B_{y}")),
+        ("particle_magnetic_field_z", ("T", [], r"B_{z}")),
+        #("particle_id", ("", ["particle_index"], None)),
+        #("particle_cpu", ("", ["particle_index"], None)),
     )
     
-    def setup_particle_fields(self, ptype):
-        pass
+    #extra_union_fields = (
+        #("GeV/c ** 2", "particle_mass"),
+        #("C", "particle_charge"),
+    #)
+    
+    #def setup_particle_fields(self, ptype):
+        #super(OpalFieldInfo, self).setup_particle_fields(ptype)
+        ##pass
     
     def setup_fluid_fields(self):
         pass
@@ -48,8 +64,8 @@ class OpalFieldInfo(FieldInfoContainer):
     def setup_fluid_index_fields(self):
         pass
     
-    def setup_extra_union_fields(self, ptype="all"):
-        pass
+    #def setup_extra_union_fields(self, ptype="all"):
+        #pass
     
     def setup_smoothed_fields(self, ptype, num_neighbors = 64, ftype = "gas"):
         pass
