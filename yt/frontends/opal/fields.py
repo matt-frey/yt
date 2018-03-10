@@ -69,10 +69,3 @@ class OpalFieldInfo(FieldInfoContainer):
     
     def setup_smoothed_fields(self, ptype, num_neighbors = 64, ftype = "gas"):
         pass
-
-
-#class OpalSingleFieldInfo(FieldInfoContainer):
-    
-    #known_other_fields = ()
-    
-    #known_particle_fields = ()
