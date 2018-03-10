@@ -124,8 +124,6 @@ class OpalDataset(BoxlibDataset):
     def _parse_parameter_file(self):
         super(OpalDataset, self)._parse_parameter_file()
         
-        print ( os.path.join(self.output_dir, "opal") )
-        
         if os.path.isdir(os.path.join(self.output_dir, "opal")):
             # we have particles
             self.parameters["particles"] = 1

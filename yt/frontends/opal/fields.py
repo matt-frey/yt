@@ -34,9 +34,9 @@ class OpalFieldInfo(FieldInfoContainer):
         ("particle_position_x", ("code_length", [], None)),
         ("particle_position_y", ("code_length", [], None)),
         ("particle_position_z", ("code_length", [], None)),
-        ("particle_momentum_x", ("1", [], r"p_{x}")), # r"\beta\gamma"
-        ("particle_momentum_y", ("1", [], r"p_{y}")),
-        ("particle_momentum_z", ("1", [], r"p_{z}")),
+        ("particle_momentum_x", ("bg", [], r"p_{x}")), # r"\beta\gamma"
+        ("particle_momentum_y", ("bg", [], r"p_{y}")),
+        ("particle_momentum_z", ("bg", [], r"p_{z}")),
         ("particle_timestep", ("code_time", [], None)),
         ("particle_potential", ("V", [], r"\Phi")),
         ("particle_electric_field_x", ("V / m", [], r"E_{x}")),
@@ -55,8 +55,8 @@ class OpalFieldInfo(FieldInfoContainer):
     #)
     
     #def setup_particle_fields(self, ptype):
-        #super(OpalFieldInfo, self).setup_particle_fields(ptype)
-        ##pass
+        #super(OpalFieldInfo, self).setup_particle_fields('')
+        ###pass
     
     def setup_fluid_fields(self):
         pass
