@@ -159,6 +159,9 @@ default_unit_symbol_lut = {
     "r_earth": (cm_per_rearth, dimensions.length, 0.0, r"R_\oplus"),
     "R_jup": (cm_per_rjup, dimensions.length, 0.0, r"R_\mathrm{Jup}"),
     "r_jup": (cm_per_rjup, dimensions.length, 0.0, r"R_\mathrm{Jup}"),
+    
+    # accelerator units
+    "bg": (1.0, dimensions.dimensionless, 0.0, r"\beta\gamma"),
 }
 
 # This dictionary formatting from magnitude package, credit to Juan Reyero.
