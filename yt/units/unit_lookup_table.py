@@ -162,6 +162,7 @@ default_unit_symbol_lut = {
     
     # accelerator units
     "bg": (1.0, dimensions.dimensionless, 0.0, r"\beta\gamma"),
+    "beta_gamma": (1.0, dimensions.dimensionless, 0.0, r"\beta\gamma"),
 }
 
 # This dictionary formatting from magnitude package, credit to Juan Reyero.
