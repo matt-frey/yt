@@ -147,6 +147,12 @@ angstrom = quan(1.0, "angstrom")
 me  = electron_mass = quan(1.0, "me")
 
 #
+# Accelerator units
+#
+
+bg = beta_gamma = quan(1.0, "bg")
+
+#
 # Angle units
 #
 
