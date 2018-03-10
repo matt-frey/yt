@@ -949,6 +949,18 @@ class PhasePlot(ImagePlotContainer):
                 self.plots[f].cax.minorticks_off()
 
         self._set_font_properties()
+        
+        #BEGIN Matthias ticks scientific fix
+        from matplotlib.ticker import ScalarFormatter
+        # In matplotlib 2.1 and newer we'll be able to do this using
+        # self.image.axes.ticklabel_format
+        # See https://github.com/matplotlib/matplotlib/pull/6337
+        formatter = ScalarFormatter(useMathText=True)
+        formatter.set_scientific(True)
+        formatter.set_powerlimits((-2, 3))
+        self.plots[f].axes.xaxis.set_major_formatter(formatter)
+        self.plots[f].axes.yaxis.set_major_formatter(formatter)
+        #END Matthias ticks scientific fix
 
         # if this is a particle plot with one color only, hide the cbar here
         if hasattr(self, "use_cbar") and self.use_cbar is False:
