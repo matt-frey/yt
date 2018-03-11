@@ -58,14 +58,14 @@ class OpalFieldInfo(FieldInfoContainer):
         #super(OpalFieldInfo, self).setup_particle_fields('')
         ###pass
     
-    def setup_fluid_fields(self):
-        pass
+    #def setup_fluid_fields(self):
+        #pass
     
-    def setup_fluid_index_fields(self):
-        pass
+    #def setup_fluid_index_fields(self):
+        #pass
     
     #def setup_extra_union_fields(self, ptype="all"):
         #pass
     
-    def setup_smoothed_fields(self, ptype, num_neighbors = 64, ftype = "gas"):
-        pass
+    #def setup_smoothed_fields(self, ptype, num_neighbors = 64, ftype = "gas"):
+        #pass
